@@ -20,11 +20,13 @@
 - `GameScreen`: Canvasを用いてStateを描画する。
 
 ## 3. ゲームループの実装
-`LaunchedEffect` 内で `withFrameNanos` を使用して、ディスプレイのリフレッシュレートに同期したループを構築する。
 
-```kotlin
-while (isActive) {
-    withFrameNanos { frameTime ->
-        viewModel.update(frameTime)
-    }
-}
+```javascript
+loop(timestamp) {
+    const dt = timestamp - this.lastTime;
+    this.lastTime = timestamp;
+
+    this.update(dt);
+    this.draw();
+
+    requestAnimationFrame(this.loop);

@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0F172A; /* Dark Navy */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    touch-action: none; /* Prevent default touch actions like scrolling */
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 600px; /* Optional: limit width on larger screens */
+    aspect-ratio: 9 / 19.5; /* Typical modern phone aspect ratio */
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #0F172A;
+}
