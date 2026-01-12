@@ -20,7 +20,6 @@
 - `GameScreen`: Canvasを用いてStateを描画する。
 
 ## 3. ゲームループの実装
-`requestAnimationFrame` を使用して、ディスプレイのリフレッシュレートに同期したループを構築する。
 
 ```javascript
 loop(timestamp) {
@@ -31,4 +30,3 @@ loop(timestamp) {
     this.draw();
 
     requestAnimationFrame(this.loop);
-}
